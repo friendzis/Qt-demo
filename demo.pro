@@ -11,6 +11,8 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    controlgroup.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    controlgroup.h

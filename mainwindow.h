@@ -4,6 +4,7 @@
 #include <QWidget>
 
 #include <QVBoxLayout>
+#include <controlgroup.h>
 
 class MainWindow : public QWidget
 {
