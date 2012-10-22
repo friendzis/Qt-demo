@@ -3,7 +3,7 @@
 MainWindow::MainWindow(QWidget *parent)
     : QWidget(parent)
 {
-    QVBoxLayout * mainLayout = new QVBoxlayout();
+    QVBoxLayout * mainLayout = new QVBoxLayout();
 
     this->setLayout(mainLayout);
 }
