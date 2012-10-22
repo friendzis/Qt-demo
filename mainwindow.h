@@ -3,6 +3,8 @@
 
 #include <QWidget>
 
+#include <QVBoxLayout>
+
 class MainWindow : public QWidget
 {
     Q_OBJECT
