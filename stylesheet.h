@@ -2,11 +2,15 @@
 #define STYLESHEET_H
 
 #include <QFile>
+#include <QString>
+#include <QTextStream>
+#include <QApplication>
 
 class Stylesheet : public QFile
 {
 public:
-    Stylesheet();
+    Stylesheet(QString path);
+    bool loadStylesheet(QApplication &a);
 };
 
 #endif // STYLESHEET_H
