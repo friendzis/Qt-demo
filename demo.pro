@@ -16,3 +16,6 @@ SOURCES += main.cpp\
 
 HEADERS  += mainwindow.h \
     controlgroup.h
+
+RESOURCES += \
+    resources.qrc
