@@ -3,10 +3,10 @@
 
 #include <QFile>
 
-class StyleSheet : public QFile
+class Stylesheet : public QFile
 {
 public:
-    StyleSheet();
+    Stylesheet();
 };
 
 #endif // STYLESHEET_H

@@ -1,5 +1,5 @@
 #include "stylesheet.h"
 
-StyleSheet::StyleSheet()
+Stylesheet::Stylesheet()
 {
 }
