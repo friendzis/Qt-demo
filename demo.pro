@@ -10,14 +10,14 @@ TARGET = demo
 TEMPLATE = app
 
 
-SOURCES += main.cpp\
-        mainwindow.cpp \
-    controlgroup.cpp \
-    stylesheet.cpp
+SOURCES += src/main.cpp\
+        src/gui/mainwindow.cpp \
+    src/gui/controlgroup.cpp \
+    src/util/stylesheet.cpp
 
-HEADERS  += mainwindow.h \
-    controlgroup.h \
-    stylesheet.h
+HEADERS  += src/gui/mainwindow.h \
+    src/gui/controlgroup.h \
+    src/util/stylesheet.h
 
 RESOURCES += \
     resources.qrc
