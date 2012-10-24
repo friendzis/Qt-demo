@@ -5,6 +5,8 @@ ControlGroup::ControlGroup()
 // and this string can be automagically tranlated. Kewl!
     : QGroupBox(tr("Application control"))
 {
+    QHBoxLayout * mainLayout = new QHBoxLayout();
+
     // Qt allows to assign shortcuts (alt+symbol) to clickable objects
     // by preceding a symbol with &. The assignment is handled automagically. Convenient :)
     this->m_startButton = new QPushButton(tr("&Start"));
@@ -15,4 +17,10 @@ ControlGroup::ControlGroup()
     m_stopButton = new QPushButton(tr("S&top"));
 
     this->m_clearButton = new QPushButton(tr("&Clear"));
+
+    mainLayout->addWidget(this->m_startButton);
+    mainLayout->addWidget(this->m_stopButton);
+    mainLayout->addWidget(this->m_clearButton);
+
+    this->setLayout(mainLayout);
 }

@@ -2,6 +2,8 @@
 #define CONTROLGROUP_H
 
 #include <QGroupBox>
+#include <QHBoxLayout>
+
 #include <QPushButton>
 
 class ControlGroup : public QGroupBox
