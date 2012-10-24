@@ -12,10 +12,12 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    controlgroup.cpp
+    controlgroup.cpp \
+    stylesheet.cpp
 
 HEADERS  += mainwindow.h \
-    controlgroup.h
+    controlgroup.h \
+    stylesheet.h
 
 RESOURCES += \
     resources.qrc
