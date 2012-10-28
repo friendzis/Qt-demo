@@ -8,7 +8,7 @@
 #include <QWidget>
 
 #include <QVBoxLayout>
-#include <controlgroup.h>
+#include <src/gui/controlgroup.h>
 
 class MainWindow : public QWidget
 {
