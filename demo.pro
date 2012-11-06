@@ -13,11 +13,13 @@ TEMPLATE = app
 SOURCES += src/main.cpp\
         src/gui/mainwindow.cpp \
     src/gui/controlgroup.cpp \
-    src/util/stylesheet.cpp
+    src/util/stylesheet.cpp \
+    src/data/dataengine.cpp
 
 HEADERS  += src/gui/mainwindow.h \
     src/gui/controlgroup.h \
-    src/util/stylesheet.h
+    src/util/stylesheet.h \
+    src/data/dataengine.h
 
 RESOURCES += \
     resources.qrc
