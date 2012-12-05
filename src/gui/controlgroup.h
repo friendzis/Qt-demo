@@ -15,6 +15,7 @@ private:
     QPushButton * m_startButton;
     QPushButton * m_stopButton;
     QPushButton * m_clearButton;
+    QPushButton * m_singleCaptureButton;
 };
 
 #endif // CONTROLGROUP_H

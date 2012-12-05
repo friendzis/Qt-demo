@@ -18,9 +18,12 @@ ControlGroup::ControlGroup()
 
     this->m_clearButton = new QPushButton(tr("&Clear"));
 
+    this->m_singleCaptureButton = new QPushButton(tr("Signle &Capture"));
+
     mainLayout->addWidget(this->m_startButton);
     mainLayout->addWidget(this->m_stopButton);
     mainLayout->addWidget(this->m_clearButton);
+    mainLayout->addWidget(this->m_singleCaptureButton);
 
     this->setLayout(mainLayout);
 }
