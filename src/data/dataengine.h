@@ -11,6 +11,7 @@ class DataEngine : public QThread
 public:
     DataEngine(int count = 3);
     void setCount(int c);
+    inline int getCount() { return this->m_count; }
     void run();
 
     QList<int> getData();

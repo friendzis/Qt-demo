@@ -10,7 +10,9 @@
 #include <QVBoxLayout>
 #include <QTableView>
 
-#include <src/gui/controlgroup.h>
+#include "src/gui/controlgroup.h"
+#include "src/data/TableModel.h"
+#include "src/data/dataengine.h"
 
 class MainWindow : public QWidget
 {
@@ -32,6 +34,8 @@ public:
 private:
     ControlGroup * m_controlGroup;
     QTableView * m_view;
+    TableModel * m_data;
+    DataEngine * m_dataProvider;
 };
 
 #endif // MAINWINDOW_H

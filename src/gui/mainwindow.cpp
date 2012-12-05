@@ -12,7 +12,11 @@ MainWindow::MainWindow(QWidget *parent)
     // Here we are calling the default constructor, therefore () are not necessary
     this->m_controlGroup = new ControlGroup;
 
+    this->m_dataProvider = new DataEngine();
+    this->m_data = new TableModel( this->m_dataProvider->getCount() );
+
     this->m_view = new QTableView();
+    this->m_view->setModel(this->m_data);
 
     // Here we add widgets to holding layout. Most visual containers do not accept bare
     // widgets not enlosed in layouts
