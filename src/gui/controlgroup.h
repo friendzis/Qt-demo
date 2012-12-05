@@ -25,6 +25,7 @@ private:
 
 signals:
     Q_SIGNAL void dataNeeded();
+    Q_SIGNAL void clearNeeded();
 
 private slots:
     Q_SLOT void timerStart();

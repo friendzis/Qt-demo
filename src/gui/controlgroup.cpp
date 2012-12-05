@@ -43,6 +43,7 @@ ControlGroup::ControlGroup()
     connect(this->m_startButton, SIGNAL(clicked()), this, SLOT(timerStart()));
     connect(this->m_startButton, SIGNAL(clicked()), this, SIGNAL(dataNeeded()));
     connect(this->m_stopButton, SIGNAL(clicked()), this->m_timer, SLOT(stop()));
+    connect(this->m_clearButton, SIGNAL(clicked()), this, SIGNAL(clearNeeded()));
 }
 
 void ControlGroup::timerStart()

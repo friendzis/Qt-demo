@@ -14,6 +14,11 @@ void TableModel::append(QList<int> list)
     Q_EMIT endInsertRows();
 }
 
+void TableModel::clear()
+{
+    this->m_data.clear();
+}
+
 int TableModel::rowCount(const QModelIndex &parent) const
 {
     return this->m_data.size();

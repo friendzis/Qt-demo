@@ -20,6 +20,7 @@ private:
 
 public slots:
     Q_SLOT void append(QList<int> list);
+    Q_SLOT void clear();
 };
 
 #endif // TABLEMODEL_H
