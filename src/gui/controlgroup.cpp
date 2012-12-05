@@ -23,6 +23,7 @@ ControlGroup::ControlGroup()
     mainLayout->addWidget(this->m_startButton);
     mainLayout->addWidget(this->m_stopButton);
     mainLayout->addWidget(this->m_clearButton);
+    mainLayout->addSpacing(30);
     mainLayout->addWidget(this->m_singleCaptureButton);
 
     this->setLayout(mainLayout);
