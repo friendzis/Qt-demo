@@ -19,7 +19,7 @@ private:
     QList<QList<int> > m_data;
 
 public slots:
-    Q_SLOT void append(QList<int>);
+    Q_SLOT void append(QList<int> list);
 };
 
 #endif // TABLEMODEL_H

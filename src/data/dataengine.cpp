@@ -16,6 +16,8 @@ void DataEngine::fill()
 {
     for (int i = 0; i < this->m_count; i++)
         this->m_list.append(rand());
+
+    Q_EMIT this->dataAvailable(this->m_list);
 }
 
 QList<int> DataEngine::getData()
