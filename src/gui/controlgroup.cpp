@@ -21,6 +21,8 @@ ControlGroup::ControlGroup()
     this->m_singleCaptureButton = new QPushButton(tr("Signle &Capture"));
 
     this->m_timeEdit = new QTimeEdit();
+    this->m_timeEdit->setMinimumTime(QTime(0,0,0,50));
+    this->m_timeEdit->setDisplayFormat("mm:ss:zzz");
 
     mainLayout->addWidget(this->m_startButton);
     mainLayout->addWidget(this->m_stopButton);
