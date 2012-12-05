@@ -14,6 +14,7 @@ void DataEngine::setCount(int c)
 
 void DataEngine::fill()
 {
+    this->m_list.clear();
     for (int i = 0; i < this->m_count; i++)
         this->m_list.append(rand());
 
