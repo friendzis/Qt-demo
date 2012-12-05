@@ -25,6 +25,9 @@ MainWindow::MainWindow(QWidget *parent)
 
     // Our fresh baked layout is now set as the contents of our main window
     this->setLayout(mainLayout);
+
+    connect(this->m_controlGroup, SIGNAL(dataNeeded()), this->m_dataProvider, SLOT(fill()));
+    connect(this->m_dataProvider, SIGNAL(dataAvailable(QList<int>)), this->m_data, SLOT(append(QList<int>)));
 }
 
 MainWindow::~MainWindow()

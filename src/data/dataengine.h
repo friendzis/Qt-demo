@@ -17,13 +17,14 @@ public:
     QList<int> getData();
 
 private:
-    void fill();
-
     int m_count;
     QList<int> m_list;
 
 signals:
     Q_SIGNAL void dataAvailable(QList<int>);
+
+public slots:
+    void fill();
 };
 
 #endif // DATAENGINE_H
