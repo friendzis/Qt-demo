@@ -3,16 +3,22 @@
 
 #include <QList>
 
-class DataEngine
+#include <QThread>
+
+class DataEngine : public QThread
 {
 public:
-    DataEngine();
-
+    DataEngine(int count = 3);
     void setCount(int c);
+    void run();
+
     QList<int> getData();
 
 private:
+    void fill();
+
     int m_count;
+    QList<int> m_list;
 };
 
 #endif // DATAENGINE_H
