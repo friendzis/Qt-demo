@@ -7,6 +7,7 @@
 
 class DataEngine : public QThread
 {
+    Q_OBJECT
 public:
     DataEngine(int count = 3);
     void setCount(int c);

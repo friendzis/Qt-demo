@@ -8,6 +8,8 @@
 #include <QWidget>
 
 #include <QVBoxLayout>
+#include <QTableView>
+
 #include <src/gui/controlgroup.h>
 
 class MainWindow : public QWidget
@@ -29,6 +31,7 @@ public:
 // the holding instance
 private:
     ControlGroup * m_controlGroup;
+    QTableView * m_view;
 };
 
 #endif // MAINWINDOW_H
