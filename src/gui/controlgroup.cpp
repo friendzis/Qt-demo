@@ -27,4 +27,6 @@ ControlGroup::ControlGroup()
     mainLayout->addWidget(this->m_singleCaptureButton);
 
     this->setLayout(mainLayout);
+
+    connect(this->m_singleCaptureButton, SIGNAL(clicked()), this, SIGNAL(dataNeeded()));
 }
