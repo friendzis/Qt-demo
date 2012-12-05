@@ -49,5 +49,9 @@ QVariant TableModel::data(const QModelIndex &index, int role) const
     case Qt::DisplayRole:
         return this->m_data.at(index.row()).at(index.column());
     break;
+
+    default:
+        return QVariant();
+    break;
     }
 }

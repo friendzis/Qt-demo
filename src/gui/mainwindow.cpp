@@ -16,6 +16,9 @@ MainWindow::MainWindow(QWidget *parent)
     this->m_data = new TableModel( this->m_dataProvider->getCount() );
 
     this->m_view = new QTableView();
+    this->m_view->setAlternatingRowColors(true);
+    this->m_view->setVerticalScrollMode(QAbstractItemView::ScrollPerItem);
+
     this->m_view->setModel(this->m_data);
 
     // Here we add widgets to holding layout. Most visual containers do not accept bare
@@ -32,6 +35,5 @@ MainWindow::MainWindow(QWidget *parent)
 }
 
 MainWindow::~MainWindow()
-{
-    
+{ 
 }
