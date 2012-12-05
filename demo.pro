@@ -9,6 +9,8 @@ QT       += core gui
 TARGET = demo
 TEMPLATE = app
 
+TRANSLATIONS = demo_en.ts\
+demo_lt.ts
 
 SOURCES += src/main.cpp\
         src/gui/mainwindow.cpp \
