@@ -20,11 +20,16 @@ ControlGroup::ControlGroup()
 
     this->m_singleCaptureButton = new QPushButton(tr("Signle &Capture"));
 
+    this->m_timeEdit = new QTimeEdit();
+
     mainLayout->addWidget(this->m_startButton);
     mainLayout->addWidget(this->m_stopButton);
     mainLayout->addWidget(this->m_clearButton);
     mainLayout->addSpacing(30);
     mainLayout->addWidget(this->m_singleCaptureButton);
+    mainLayout->addSpacing(60);
+    mainLayout->addStretch();
+    mainLayout->addWidget(this->m_timeEdit);
 
     this->setLayout(mainLayout);
 
