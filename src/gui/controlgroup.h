@@ -6,6 +6,7 @@
 
 #include <QPushButton>
 #include <QTimeEdit>
+#include <QTimer>
 
 class ControlGroup : public QGroupBox
 {
@@ -20,9 +21,13 @@ private:
     QPushButton * m_singleCaptureButton;
 
     QTimeEdit * m_timeEdit;
+    QTimer * m_timer;
 
 signals:
     Q_SIGNAL void dataNeeded();
+
+private slots:
+    Q_SLOT void timerStart();
 };
 
 #endif // CONTROLGROUP_H

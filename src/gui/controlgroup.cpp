@@ -7,6 +7,8 @@ ControlGroup::ControlGroup()
 {
     QHBoxLayout * mainLayout = new QHBoxLayout();
 
+    this->m_timer = new QTimer();
+
     // Qt allows to assign shortcuts (alt+symbol) to clickable objects
     // by preceding a symbol with &. The assignment is handled automagically. Convenient :)
     this->m_startButton = new QPushButton(tr("&Start"));
@@ -23,6 +25,7 @@ ControlGroup::ControlGroup()
     this->m_timeEdit = new QTimeEdit();
     this->m_timeEdit->setMinimumTime(QTime(0,0,0,50));
     this->m_timeEdit->setDisplayFormat("mm:ss:zzz");
+    this->m_timeEdit->setSelectedSection(QDateTimeEdit::SecondSection);
 
     mainLayout->addWidget(this->m_startButton);
     mainLayout->addWidget(this->m_stopButton);
@@ -36,4 +39,12 @@ ControlGroup::ControlGroup()
     this->setLayout(mainLayout);
 
     connect(this->m_singleCaptureButton, SIGNAL(clicked()), this, SIGNAL(dataNeeded()));
+    connect(this->m_timer, SIGNAL(timeout()), this, SIGNAL(dataNeeded()));
+    connect(this->m_startButton, SIGNAL(clicked()), this, SLOT(timerStart()));
+    connect(this->m_stopButton, SIGNAL(clicked()), this->m_timer, SLOT(stop()));
+}
+
+void ControlGroup::timerStart()
+{
+    this->m_timer->start(this->m_timeEdit->time().msec() + this->m_timeEdit->time().second()*1000 + this->m_timeEdit->time().minute()*1000*60);
 }
