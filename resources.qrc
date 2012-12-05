@@ -2,15 +2,11 @@
     <qresource prefix="/">
         <file alias="style.css">resources/style.css</file>
     </qresource>
-</RCC>
 
-<RCC>
     <qresource prefix="/">
         <file alias="demo_en.qm">resources/demo_en.qm</file>
     </qresource>
-</RCC>
 
-<RCC>
     <qresource prefix="/">
         <file alias="demo_lt.qm">resources/demo_lt.qm</file>
     </qresource>

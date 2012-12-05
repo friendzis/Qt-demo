@@ -1,4 +1,9 @@
 #include <QtGui/QApplication>
+
+#include <QString>
+#include <QLocale>
+#include <QTranslator>
+
 #include "src/gui/mainwindow.h"
 #include "src/util/stylesheet.h"
 
@@ -13,6 +18,12 @@ int main(int argc, char *argv[])
     // instead of actual filesystem
     Stylesheet * css = new Stylesheet(":/style.css");
     css->loadStylesheet(a);
+
+    QLocale lc(QLocale::Lithuanian);// = QLocale::Lithuania;
+
+    QTranslator ts;
+    ts.load(QString(":/demo_lt"));
+    a.installTranslator(&ts);
 
     MainWindow w;
     // The application will happily run without this. Just without any visual interface ;]
