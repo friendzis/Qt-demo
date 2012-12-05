@@ -28,6 +28,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     connect(this->m_controlGroup, SIGNAL(dataNeeded()), this->m_dataProvider, SLOT(fill()));
     connect(this->m_dataProvider, SIGNAL(dataAvailable(QList<int>)), this->m_data, SLOT(append(QList<int>)));
+    connect(this->m_controlGroup, SIGNAL(clearNeeded()), this->m_data, SLOT(clear()));
 }
 
 MainWindow::~MainWindow()
