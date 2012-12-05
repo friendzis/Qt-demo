@@ -6,6 +6,7 @@
 
 class TableModel : public QAbstractTableModel
 {
+    Q_OBJECT
 public:
     explicit TableModel(int c);
 
@@ -16,6 +17,9 @@ public:
 private:
     int m_columns;
     QList<QList<int> > m_data;
+
+public slots:
+    Q_SLOT void append(QList<int>);
 };
 
 #endif // TABLEMODEL_H

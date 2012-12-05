@@ -21,6 +21,9 @@ private:
 
     int m_count;
     QList<int> m_list;
+
+signals:
+    Q_SIGNAL void dataAvailable(QList<int>);
 };
 
 #endif // DATAENGINE_H
