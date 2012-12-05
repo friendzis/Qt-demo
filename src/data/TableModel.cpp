@@ -7,7 +7,11 @@ TableModel::TableModel(int c)
 
 void TableModel::append(QList<int> list)
 {
+    Q_EMIT beginInsertRows(QModelIndex(), this->m_data.size(), this->m_data.size());
+
     this->m_data.append(list);
+
+    Q_EMIT endInsertRows();
 }
 
 int TableModel::rowCount(const QModelIndex &parent) const
