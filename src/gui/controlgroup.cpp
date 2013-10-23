@@ -27,8 +27,8 @@ ControlGroup::ControlGroup()
     this->m_timeEdit->setDisplayFormat("mm:ss:zzz");
     this->m_timeEdit->setSelectedSection(QDateTimeEdit::SecondSection);
 
-    mainLayout->addWidget(this->m_startButton);
     mainLayout->addWidget(this->m_stopButton);
+    mainLayout->addWidget(this->m_startButton);
     mainLayout->addWidget(this->m_clearButton);
     mainLayout->addSpacing(30);
     mainLayout->addWidget(this->m_singleCaptureButton);
